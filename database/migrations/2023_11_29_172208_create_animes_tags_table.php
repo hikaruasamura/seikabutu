@@ -15,7 +15,9 @@ return new class extends Migration
     {
         Schema::create('animes_tags', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->foreignId('anime_id')->constrained('anime');
+            $table->foreignId('tag_id')->constrained('tag');
+            $table->primary(['anime_id', 'tag_id']);
         });
     }
 
