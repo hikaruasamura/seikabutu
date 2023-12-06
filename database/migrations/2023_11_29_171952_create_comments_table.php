@@ -17,7 +17,8 @@ return new class extends Migration
             $table->id();
             $table->string('comment');
             $table->timestamps('created_at')->useCurrent->nullable();
-            $table->foreignId('tag_id')->constrained();
+            $table->foreignId('user_id')->constrained();
+            $table->foreignId('review_id')->constrained();
         });
     }
 
