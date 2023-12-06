@@ -15,9 +15,9 @@ return new class extends Migration
     {
         Schema::create('animes', function (Blueprint $table) {
             $table->id();
-            $table->string('animename');
+            $table->string('title');
             $table->string('season');
-            $table->string('anime_information');
+            $table->string('description');
             $table->string('anime_link');
             $table->path();
         });
