@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Animeblog extends Model
 {
     use HasFactory;
+    
+    protected $table = 'animes';
+    
+    protected $fillable = ['title','description','image_path'];
 }

@@ -29,6 +29,5 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 Route::get('/animeblog', [AnimeblogController::class, 'index']);
-Route::get('/index','App\Http\Controllers\AnimeblogController@recommendAnime')->name('index');
 
 require __DIR__.'/auth.php';

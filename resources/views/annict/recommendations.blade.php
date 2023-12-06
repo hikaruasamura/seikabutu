@@ -1,9 +1,9 @@
 <x-app-layout>
-    @foreach ($animes as $anime)
     <div>
-        <h3>{{ $anime["title"] }}</h3>
-        <p>{{ $anime['description'] }}</p>
+    @foreach ($works as $work)
+        <h3>{{ $work["title"] }}</h3>
+        <p>{{ $work['season'] }}</p>
         <!-- 他のアニメ情報を表示 -->
-    </div>
     @endforeach
+    </div>
 </x-app-layout>

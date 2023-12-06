@@ -1,13 +1,18 @@
-<x-app-layout>
-    @if ($errors->any())
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
+<!-- resources/views/error.blade.php -->
 
-    <!-- 他のコンテンツをここに表示 -->
-</x-app-layout>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error</title>
+</head>
+<body>
+    <h1>An Error Occurred</h1>
+    <p>{{ $message }}</p>
+    
+    @if(isset($debugMessage))
+        <p>Debug Message: {{ $debugMessage }}</p>
+    @endif
+</body>
+</html>
