@@ -1,6 +1,6 @@
 <x-app-layout>
     <h1>Anime Recommender</h1>
-    <form action="{{ route('recommend') }}" method="post">
+    <form action="{{ route('Animeblog') }}" method="post">
         @csrf
         <label for="name">Your Name:</label>
         <input type="text" name="name" required>
