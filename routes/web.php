@@ -25,7 +25,7 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
-Route::get('/', [AnimeblogController::class, 'index']);
-Route::get('/index','App\Http\Controllers\AnimeblogController@index')->name('index');
-Route::get('/get-access-token', [AnimeblogController::class, 'getAccessToken']);
+Route::get('/','App\Http\Controllers\AnimeblogController@index')->name('index');
+Route::get('/annict/recommendations', [AnimeblogController::class, 'Recommendations'])->name('annict.recommendations');
+Route::get('/annict/anime',[animeblogController::class, 'Anime'])->name('annict.anime');
 require __DIR__.'/auth.php';

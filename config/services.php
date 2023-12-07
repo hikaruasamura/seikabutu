@@ -32,7 +32,7 @@ return [
     ],
     
     'annict' => [
-        'key' => env('ANNICT_ACCESS_TOKEN'),
+        'token' => env('ANNICT_ACCESS_TOKEN'),
     ],
 
 ];
