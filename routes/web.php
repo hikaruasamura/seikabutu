@@ -15,9 +15,6 @@ use App\Http\Controllers\AnimeblogController;
 |
 */
 
-Route::get('/', function () {
-    return view('animeblog.index');
-});
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -28,6 +25,7 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
-Route::get('/animeblog', [AnimeblogController::class, 'index']);
-
+Route::get('/', [AnimeblogController::class, 'index']);
+Route::get('/index','App\Http\Controllers\AnimeblogController@index')->name('index');
+Route::get('/get-access-token', [AnimeblogController::class, 'getAccessToken']);
 require __DIR__.'/auth.php';
